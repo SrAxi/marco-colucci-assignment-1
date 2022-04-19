@@ -82,9 +82,9 @@ const allThePaperStockOptions: NodeListOf<HTMLElement> = document.querySelectorA
 checkBox.addEventListener("click", (e) => {
     // every time I click the checkbox, the function will check if the box is marked or not
     let checked: boolean = (e.target as HTMLInputElement).checked
-    if (checked === true) {
+    if (checked) {
         // if it's checked the function will filtered all the objects (from the paperStock array) with the recycled value equal to true
-        let newArr: SingleProduct [] = paperStock_1.filter((option: SingleProduct) => option.recycled === true)
+        let newArr: SingleProduct [] = paperStock_1.filter((option: SingleProduct) => option.recycled)
         // then it will store only the name of the recycled options in an array
         newArr.map(ar => {
             recycledOptions.push(ar.paperName)
