@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>The Office</title>
+</head>
+<body id="TheCompanyCalculator">
+    <section id="CompanyDescription">
+        <div id="CompanyDescriptionBody">
+            <h1>Michael Scott Paper Company Product Calculator</h1>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi quidem expedita placeat est possimus! Itaque provident animi ut, voluptatem voluptas optio beatae nobis ducimus at eos fuga aliquam illum esse?</p>
+        </div>
+    </section>
+    <section id="Calculator_Table">
+        <div id="Calculator">
+            <div id="General">
+                <h4>General</h4>
+                <div id="allTheImputs">    
+                    <div class="General_inputs">
+                        <label>Company name</label>
+                        <input id="companyName" type="text" ></input>
+                        <p id="companyNameError">Please Add the Company name</p>
+                    </div>
+                    <div class="General_inputs">
+                        <label>Number of documents printed per week</label>
+                        <input id="documentsPerWeek" type="text" ></input>
+                        <p id="documentsPerWeekError" >Please add a Positive Number</p>
+                    </div>
+                    <div class="General_inputs">
+                        <label>Avarage pages per document</label>
+                        <input id="pagePerDocument" type="text" ></input>
+                        <p id="pagePerDocumentError" >Please add a Positive Number</p>
+                    </div>
+                </div>
+            </div>
+            <div id="PaperSelection">
+                <h4>Paper Selection</h4>
+                <div id="CheckBox">
+                    <input id="check" type="checkbox">
+                    <label>only show recycled products</label>
+                </div>
+                <div id="Paper_stock_dropdown">
+                    <p>Paper stock</p>
+                    <select id="DropDownSelection" name="select one">
+                        <option>Select one</option>
+                    </select>
+                </div>
+                <button id="Calculate">Calculate</button>
+            </div>
+        </div>
+        <div id="Table">
+            <table>
+                <tr>
+                    <td>Average annual pages printed</td>
+                    <td class="tableRows" id="NumberOfDocumentsPrintedPerYear"></td>
+                </tr>
+                <tr>
+                    <td>Selected paper stock</td>
+                    <td class="tableRows" id="paperStockLabel"></td>
+                </tr>
+                <tr>
+                    <td>Cost per page w/ Michael Scott</td>
+                    <td class="tableRows" id="MichaelScottCostPerSheet"></td>
+                </tr>
+                <tr>
+                    <td>Cost per page w/ Competitor</td>
+                    <td class="tableRows" id="CompetitorCostPerPage"></td>
+                </tr>
+                <tr>
+                    <td>Paper brand</td>
+                    <td class="tableRows" id="paperBrand"></td>
+                </tr>
+                <tr id="additionalDetailsRow">
+                    <td>Additional details</td>
+                    <td class="tableRows" id="additionalDetails"></td>
+                </tr>
+            </table>
+            <div id="results">
+                <div class="resultsCost" id="annualCostMichaelScott">
+                    <p>Annual cost w/ Michael Scott</p>
+                    <h1 id="annualCostForMikeResults"></h1>
+                </div>
+                <div class="resultsCost" id="savingsVsCompetitor">
+                    <p>Savings vs Competitor</p>
+                    <h1 id="savingVsCompetitorResults"></h1>
+                </div>
+                <button id="adjustResponse">Adjust Response</button>
+            </div>
+        </div>
+    </section>   
+    <script defer type="module" src="./script.js"></script>
+    <script defer type="module" src="./paperStock.js"></script>
+</body>
+</html>
