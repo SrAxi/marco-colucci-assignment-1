@@ -86,7 +86,7 @@ checkBox.addEventListener("click", (e) => {
         // if it's checked the function will filtered all the objects (from the paperStock array) with the recycled value equal to true
         let newArr: SingleProduct [] = paperStock_1.filter((option: SingleProduct) => option.recycled)
         // then it will store only the name of the recycled options in an array
-        newArr.map(ar => {
+        newArr.forEach(ar => {
             recycledOptions.push(ar.paperName)
         })
 
@@ -197,7 +197,6 @@ calculateButton.addEventListener('click', () => {
 
 // The "Adjust Response's" event listener will bring the user to the initial calculator "state". Here I was a little confuse. The sheet says "where they can change their responses" so I made it in the way that when the customer goes back to the calculator, all the fields will be filled with the info previously insert.
 adjustResponse.addEventListener('click', () => {
-
     calculator.style.display = 'flex'
     table.style.display = 'none'
     additionalDetailsRow.style.display = 'contents'
